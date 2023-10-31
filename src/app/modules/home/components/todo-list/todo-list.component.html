@@ -4,6 +4,7 @@
       <input type="checkbox" class="checked" [(ngModel)]="item.checked" />
       <input
         type="text"
+        (keyup)="validationInput(item.task, i)"
         [(ngModel)]="item.task"
         [ngClass]="{ checked: item.checked }"
       />
